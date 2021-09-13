@@ -10,10 +10,11 @@ let package = Package(
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-//        .executable(name: "trueid-community", targets: ["trueid-community"])
+        //        .executable(name: "trueid-community", targets: ["trueid-community"])
         .library(
             name: "trueid-community",
-            targets: ["trueid-community","AmityUIKit", "AmitySDK", "Realm"])
+            //            targets: ["trueid-community","AmityUIKit", "AmitySDK", "Realm"])
+            targets: ["trueid-community"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,21 +25,21 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .binaryTarget(
-                   name: "AmityUIKit",
-                   url: "https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios-uikit-frameworks/2.4.3/AmityUIKit.xcframework.zip",
-                   checksum: "6fe493bfa7b289a54905a18e525e97304a753686944f6999ee78e5f8c7293720"
-               ),
-               .binaryTarget(
-                   name: "AmitySDK",
-                   url: "https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios-uikit-frameworks/2.4.3/AmitySDK.xcframework.zip",
-                   checksum: "b3668000455a7fd10a9c718ec5c6f5e570190cebe564e06ae085e2cef8a043d0"
-               ),
-               .binaryTarget(
-                   name: "Realm",
-                   url: "https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios-uikit-frameworks/2.4.3/Realm.xcframework.zip",
-                   checksum: "6d8e472570e97656448ace2798c2e550af111fda281fd5ca25cf9fbad557e58f"
-               ),
+        //        .binaryTarget(
+        //                   name: "AmityUIKit",
+        //                   url: "https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios-uikit-frameworks/2.4.3/AmityUIKit.xcframework.zip",
+        //                   checksum: "6fe493bfa7b289a54905a18e525e97304a753686944f6999ee78e5f8c7293720"
+        //               ),
+        //               .binaryTarget(
+        //                   name: "AmitySDK",
+        //                   url: "https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios-uikit-frameworks/2.4.3/AmitySDK.xcframework.zip",
+        //                   checksum: "b3668000455a7fd10a9c718ec5c6f5e570190cebe564e06ae085e2cef8a043d0"
+        //               ),
+        //               .binaryTarget(
+        //                   name: "Realm",
+        //                   url: "https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios-uikit-frameworks/2.4.3/Realm.xcframework.zip",
+        //                   checksum: "6d8e472570e97656448ace2798c2e550af111fda281fd5ca25cf9fbad557e58f"
+        //               ),
         .target(
             name: "trueid-community",
             dependencies: ["SwiftyJSON", "Alamofire"]),
